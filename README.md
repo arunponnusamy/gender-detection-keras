@@ -1,5 +1,5 @@
 # Gender detection (from scratch) using deep learning with keras and cvlib
-The keras model is created by training SmallerVGGNet from scratch on around 2200 face images (~1100 for each class). Face region is cropped by applying `face detection` using `cvlib` on the images gathered from Google Images. It acheived around 96% training accuracy and ~90% validation accuracy. (20% of the dataset is used for validation)
+The keras model is created by training [SmallerVGGNet](model.png) from scratch on around 2200 face images (~1100 for each class). Face region is cropped by applying `face detection` using `cvlib` on the images gathered from Google Images. It acheived around 96% training accuracy and ~90% validation accuracy. (20% of the dataset is used for validation)
 
 ## Python packages
 * numpy
@@ -50,6 +50,8 @@ Install them by typing `pip install scikit-learn matplotlib`
 Start the training by running the command
 
 `$ python train.py -d <path-to-dataset>`
+
+(i.e) _$ python train.py -d ~/Downloads/gender_dataset_face/_
 
 Depending on the hardware configuration of your system, the execution time will vary. On CPU, training will be slow. After the training, the model file will be saved in the current path as `gender_detection.model`.
 
