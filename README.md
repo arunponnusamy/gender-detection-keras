@@ -36,3 +36,21 @@ When you run the script for the first time, it will download the pre-trained mod
 ### Sample output :
 
 ![](sample_output.jpg)
+
+## Training
+You can download the dataset I gathered from Google Images from this [link](https://s3.ap-south-1.amazonaws.com/arunponnusamy/datasets/gender_dataset_face.zip) and train the network from scratch on your own if you are interested. You can add more images and play with the hyper parameters to experiment different ideas. 
+
+### Additional packages
+* scikit-learn
+* matplotlib
+
+Install them by typing `pip install scikit-learn matplotlib`
+
+### Usage
+Start the training by running the command
+
+`$ python train.py -d <path-to-dataset>`
+
+Depending on the hardware configuration of your system, the execution time will vary. On CPU, training will be slow. After the training, the model file will be saved in the current path as `gender_detection.model`.
+
+If you have an Nvidia GPU, then you can install `tensorflow-gpu` package. It will make things run a lot faster.
