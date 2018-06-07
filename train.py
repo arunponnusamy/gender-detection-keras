@@ -28,7 +28,7 @@ ap.add_argument("-p", "--plot", type=str, default="plot.png",
 	help="path to output accuracy/loss plot")
 args = ap.parse_args()
 
-epochs = 1
+epochs = 100
 lr = 1e-3
 batch_size = 64
 img_dims = (96,96,3)
@@ -94,6 +94,3 @@ plt.xlabel("Epoch #")
 plt.ylabel("Loss/Accuracy")
 plt.legend(loc="upper right")
 plt.savefig(args.plot)
-
-plot_model(model, to_file=args.plot, show_shapes="True", show_layer_names="True",
-           rankdir="TB")
