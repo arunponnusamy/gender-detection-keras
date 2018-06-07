@@ -14,7 +14,10 @@ Install the required packages by executing the following command.
 
 **Note: Python 2.x is not supported** 
 
-Make sure `pip` is linked to Python 3.x  (`pip -V` will display this info)
+Make sure `pip` is linked to Python 3.x  (`pip -V` will display this info).
+
+If `pip` is linked to Python 2.7. Use `pip3` instead. 
+`pip3` can be installed using the command `sudo apt-get install python3-pip`
 
 Using **Python virtual environment** is highly recommended.
 
@@ -27,6 +30,8 @@ Using **Python virtual environment** is highly recommended.
 `$ python detect_gender_webcam.py`
 
 When you run the script for the first time, it will download the pre-trained model from this [link](https://s3.ap-south-1.amazonaws.com/arunponnusamy/pre-trained-weights/gender_detection.model) and place it under `pre-trained` directory in the current path.
+
+(If `python` command invokes default Python 2.7, use `python3` instead)
 
 ### Sample output :
 
