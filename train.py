@@ -5,6 +5,7 @@ from keras.preprocessing.image import ImageDataGenerator
 from keras.optimizers import Adam
 from keras.preprocessing.image import img_to_array
 from keras.utils import to_categorical
+from keras.utils import plot_model
 
 from sklearn.model_selection import train_test_split
 from model.smallervggnet import SmallerVGGNet
@@ -27,7 +28,7 @@ ap.add_argument("-p", "--plot", type=str, default="plot.png",
 	help="path to output accuracy/loss plot")
 args = ap.parse_args()
 
-epochs = 100
+epochs = 1
 lr = 1e-3
 batch_size = 64
 img_dims = (96,96,3)
@@ -59,15 +60,11 @@ for img in image_files:
 data = np.array(data, dtype="float") / 255.0
 labels = np.array(labels)
 
-'''lb = LabelBinarizer()
-labels = lb.fit_transform(labels)'''
-
 (trainX, testX, trainY, testY) = train_test_split(data, labels, test_size=0.2,
                                                   random_state=42)
 trainY = to_categorical(trainY, num_classes=2)
 testY = to_categorical(testY, num_classes=2)
-print(testY)
-print(testY.shape)
+
 aug = ImageDataGenerator(rotation_range=25, width_shift_range=0.1,
                          height_shift_range=0.1, shear_range=0.2, zoom_range=0.2,
                          horizontal_flip=True, fill_mode="nearest")
@@ -97,3 +94,6 @@ plt.xlabel("Epoch #")
 plt.ylabel("Loss/Accuracy")
 plt.legend(loc="upper right")
 plt.savefig(args.plot)
+
+plot_model(model, to_file=args.plot, show_shapes="True", show_layer_names="True",
+           rankdir="TB")
