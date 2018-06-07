@@ -4,9 +4,11 @@
 # import necessary packages
 from keras.preprocessing.image import img_to_array
 from keras.models import load_model
+from keras.utils import get_file
 import numpy as np
 import argparse
 import cv2
+import os
 import cvlib as cv
 
 # handle command line arguments
@@ -31,7 +33,7 @@ if image is None:
     exit()
 
 # load pre-trained model
-model = load_model(args.model)
+model = load_model(model_path)
 
 # detect faces in the image
 face, confidence = cv.detect_face(image)
