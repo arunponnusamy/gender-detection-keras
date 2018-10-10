@@ -6,6 +6,8 @@ The keras model is created by training [SmallerVGGNet](model.png) from scratch o
 * opencv-python
 * tensorflow
 * keras
+* requests
+* progressbar
 * cvlib
 
 Install the required packages by executing the following command.
