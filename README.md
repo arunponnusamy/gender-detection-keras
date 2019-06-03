@@ -34,7 +34,7 @@ Using **Python virtual environment** is highly recommended.
 ### webcam
 `$ python detect_gender_webcam.py`
 
-When you run the script for the first time, it will download the pre-trained model from this [link](https://s3.ap-south-1.amazonaws.com/arunponnusamy/pre-trained-weights/gender_detection.model) and place it under `pre-trained` directory in the current path.
+When you run the script for the first time, it will download the pre-trained model from this [link](https://github.com/arunponnusamy/cvlib/releases/download/v0.2.0/gender_detection.model) and place it under `pre-trained` directory in the current path.
 
 (If `python` command invokes default Python 2.7, use `python3` instead)
 
