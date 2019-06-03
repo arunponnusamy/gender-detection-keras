@@ -18,12 +18,9 @@ ap.add_argument("-i", "--image", required=True,
 args = ap.parse_args()
 
 # download pre-trained model file (one-time download)
-dwnld_link = "https://s3.ap-south-1.amazonaws.com/arunponnusamy/pre-trained-weights/gender_detection.model"
+dwnld_link = "https://github.com/arunponnusamy/cvlib/releases/download/v0.2.0/gender_detection.model"
 model_path = get_file("gender_detection.model", dwnld_link,
                      cache_subdir="pre-trained", cache_dir=os.getcwd())
-                     
-# load model
-model = load_model(model_path)
 
 # read input image
 image = cv2.imread(args.image)
