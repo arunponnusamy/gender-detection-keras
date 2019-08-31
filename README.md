@@ -43,7 +43,7 @@ When you run the script for the first time, it will download the pre-trained mod
 ![](sample_output.jpg)
 
 ## Training
-You can download the dataset I gathered from Google Images from this [link](https://s3.ap-south-1.amazonaws.com/arunponnusamy/datasets/gender_dataset_face.zip) and train the network from scratch on your own if you are interested. You can add more images and play with the hyper parameters to experiment different ideas. 
+You can download the dataset I gathered from Google Images from this [link](https://github.com/arunponnusamy/gender-detection-keras/releases/download/v0.1/gender_dataset_face.zip) and train the network from scratch on your own if you are interested. You can add more images and play with the hyper parameters to experiment different ideas. 
 
 ### Additional packages
 * scikit-learn
