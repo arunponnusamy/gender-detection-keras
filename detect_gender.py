@@ -51,7 +51,7 @@ for idx, f in enumerate(face):
     face_crop = np.copy(image[startY:endY,startX:endX])
 
     # preprocessing for gender detection model
-    face_crop = cv2.resize(face_crop, (96,96))
+    face_crop = cv2.resize(face_crop, (120,120))
     face_crop = face_crop.astype("float") / 255.0
     face_crop = img_to_array(face_crop)
     face_crop = np.expand_dims(face_crop, axis=0)

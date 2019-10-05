@@ -33,7 +33,7 @@ args = ap.parse_args()
 epochs = 100
 lr = 1e-3
 batch_size = 64
-img_dims = (96,96,3)
+img_dims = (120,120,3)
 
 data = []
 labels = []
